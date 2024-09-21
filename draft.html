@@ -2,25 +2,238 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathieu Ugrin's Profile</title>
+    <title>Mathieu Daniel Ugrin - Professional CV</title>
+    <style>
+        :root {
+            --bg-color: #1e2128;
+            --text-color: #e0e0e0;
+            --accent-color: #ffd700;
+            --card-bg: #2a2e37;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .sidebar {
+            width: 30%;
+            padding-right: 20px;
+        }
+        .main-content {
+            width: 70%;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            color: var(--accent-color);
+        }
+        .skill-bar {
+            background-color: #444;
+            height: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .skill-progress {
+            background-color: var(--accent-color);
+            height: 100%;
+            border-radius: 5px;
+        }
+        .language-skill {
+            display: inline-block;
+            width: 60px;
+            text-align: center;
+            margin-right: 10px;
+        }
+        .circle-progress {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: conic-gradient(var(--accent-color) var(--progress), #444 0deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .circle-progress::before {
+            content: attr(data-progress);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--bg-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .banner {
+            background-image: url('https://via.placeholder.com/1000x300');
+            background-size: cover;
+            background-position: center;
+            padding: 40px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .banner h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .banner .code {
+            background-color: rgba(0,0,0,0.7);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .highlights {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .highlight-item {
+            text-align: center;
+        }
+        .highlight-item .number {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .service-card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Mathieu Ugrin's Profile</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/mathieuugrin">LinkedIn Profile</a></li>
-        </ul>
-    </nav>
-    <section>
-        <h2>About Me</h2>
-        <p>Go to url</p>
-    </section>
-    <footer>
-        <p>&copy; 2024 Mathieu Ugrin</p>
-    </footer>
+    <div class="container">
+        <div class="sidebar">
+            <img src="https://via.placeholder.com/150" alt="Mathieu Daniel Ugrin" class="profile-pic">
+            <h1>Mathieu Daniel Ugrin</h1>
+            <p>IT Business Analyst</p>
+            <p>Residence: Cyprus</p>
+            <p>City: Limassol</p>
+            
+            <h2>Languages</h2>
+            <div class="language-skills">
+                <div class="language-skill">
+                    <div class="circle-progress" style="--progress: 360deg;" data-progress="100%"></div>
+                    <p>English</p>
+                </div>
+                <div class="language-skill">
+                    <div class="circle-progress" style="--progress: 360deg;" data-progress="100%"></div>
+                    <p>French</p>
+                </div>
+                <div class="language-skill">
+                    <div class="circle-progress" style="--progress: 252deg;" data-progress="70%"></div>
+                    <p>Afrikaans</p>
+                </div>
+            </div>
+            
+            <h2>Technical Skills</h2>
+            <div class="skill">
+                <p>Business Analysis</p>
+                <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
+            </div>
+            <div class="skill">
+                <p>Project Management</p>
+                <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+            </div>
+            <div class="skill">
+                <p>Data Analysis</p>
+                <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+            </div>
+            <div class="skill">
+                <p>Agile Methodologies</p>
+                <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="banner">
+                <h2>Discover my Professional Journey!</h2>
+                <p class="code">I analyze business needs and deliver IT solutions.</p>
+                <a href="#" class="button">EXPLORE NOW</a>
+            </div>
+            
+            <div class="highlights">
+                <div class="highlight-item">
+                    <p class="number">10+</p>
+                    <p>Years Experience</p>
+                </div>
+                <div class="highlight-item">
+                    <p class="number">50+</p>
+                    <p>Completed Projects</p>
+                </div>
+                <div class="highlight-item">
+                    <p class="number">30+</p>
+                    <p>Happy Clients</p>
+                </div>
+            </div>
+            
+            <h2>My Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Business Analysis</h3>
+                    <p>Analyzing business needs and processes to recommend effective IT solutions.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Project Management</h3>
+                    <p>Leading IT projects from inception to successful completion.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Data Analysis</h3>
+                    <p>Interpreting complex data sets to drive business decisions.</p>
+                </div>
+            </div>
+            
+            <h2>Work Experience</h2>
+            <div class="job">
+                <h3>IT Business Analyst</h3>
+                <p>Odyssey Cybersecurity, R&D Department</p>
+                <p>May 2024 - Present</p>
+                <ul>
+                    <li>Analyze and document business requirements for cybersecurity solutions</li>
+                    <li>Collaborate with development teams to implement innovative security features</li>
+                    <li>Conduct research on emerging cybersecurity trends and technologies</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <h3>System & Business Analyst</h3>
+                <p>Exelia Technologies - Cyprus</p>
+                <p>December 2020 — September 2022</p>
+                <ul>
+                    <li>Led business analysis across various industries including maritime, transport, energy, marketing, procurement, retail and e-commerce</li>
+                    <li>Key Projects: Secure document sharing platform, vaccination queuing platform, and a digital transformation project for maritime procurement automation</li>
+                </ul>
+            </div>
+            
+            <!-- Add more job entries as needed -->
+        </div>
+    </div>
 </body>
 </html>
